@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+                function calcular(){
+                var idade = document.getElementById('idade').value;
+
+                idade = parseInt(idade)
+
+                var ano = 0, mes = 0, dia = 0
+
+
+                ano = parseInt(idade / 365);
+
+                mes = parseInt(idade % 365) / 30;
+
+                dia = parseInt(idade % 365) % 30;
+
+                if(document.getElementById('idade').value == ""){
+                    ano = 0;
+
+                    mes = 0;
+
+                    dia = 0;
+                }
+
+                
+                document.getElementById('anos').value = (parseInt(ano) + " ano(s)")
+                document.getElementById('meses').value = (parseInt(mes) + " mês(s)") 
+                document.getElementById('dias').value = (parseInt(dia) + " dia(s)")
+
+                }
+        </script>
+
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    </head>
+<body style="overflow-x: hidden; background-image: url(../Desafios/img/bg.jpg);">
+    <div class="container d-flex">
+        <div class = "row">
+          <div class="col-12">
+            <div class="card" style="width: 25rem; margin-left: 100%; margin-top: 25%; background-color:seashell;">
+                <div class="card-body">
+                    <h5 class="card-title">Divisor de dias</h5>
+                                <label for="idade">Digite qualquer quantidade de dias:</label>
+                                <input type="text" class="form-control" id="idade" placeholder="Exemplo: 400" required="">
+                                <br>
+                                <label for="anos">Ano(s):</label>
+                                <input type="text" class="form-control" id="anos" placeholder = "0 ano(s)" disabled = "true">
+                                <br>
+                                <label for="meses">Mês(es):</label>
+                                <input type="text" class="form-control" id="meses" placeholder = "0 mês(s)" disabled = "true">
+                                <br>
+                                <label for="dias">Dia(s):</label>
+                                <input type="text" class="form-control" id="dias" placeholder="0 dia(s)" disabled = "true">
+                                <br>
+                            <button class="btn btn-primary" onclick="calcular()">Calcular</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+ </body>
+</html>
